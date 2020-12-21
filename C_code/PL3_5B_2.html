@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>C Code</title>
+
+	<style type="text/css">
+
+		body{
+				background-color: #f0ffff;
+			}
+		
+		pre{
+				background-color: #778899;
+				font-size: 15px;
+		   }
+	</style>
+</head>
+<body>
+	<section>
+		<h3>Problem Statemnt:</h3>
+		<p>Write a program in any language to find the sum of the series 1 +11 + 111 + 1111 + ... n terms.</p>
+	</section>
+	<hr>
+	<section>
+		<h3>Code</h3>
+		<pre class="line-numbers"><code class="language-c">#include &lt;stdio.h&gt;
+
+void main()
+{
+  int n,i; 
+  long sum=0;
+  long int t=1;
+  printf("Input the number of terms : ");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+     printf("%ld  ",t);
+      if (i&lt;n)
+      {
+          printf("+ "); 
+          
+      }
+     sum=sum+t;
+     t=(t*10)+1;
+  }
+  printf("\nThe Sum is : %ld\n",sum);
+}
+		</code>
+			</pre>
+	</section>
+	<hr>
+
+	<section>
+<h3>Sample Output: </h3>
+<pre class="output">Input the number of terms : 5                                                                                 
+1 + 11 + 111 + 1111 + 11111                                                                                  
+The Sum is : 12345 
+</pre>
+	</section>
+	<hr>
+
+<section>
+	<h3>Variables used in Code:</h3>
+	<var>n<var> is number of terms to be inputed
+	<br><var>t</var> is a traverser 	
+</section>
+<hr>
+<section>
+	<h3>Complexity of the program:</h3>
+	<pre>Complexity: O(log n)</pre>
+</section>
+</body>
+</html>
